@@ -6,14 +6,25 @@ package youyun.com.squarehttprequest.biz;
 public interface OkhttpRequest {
 
     /**
-     * get请求
-     * @param listener
+     * 同步get请求
+     * @return
      */
-    void httpGet(onRequestListener listener);
+    String synchronousGet();
 
     /**
-     * post请求
+     * 异步get请求
      * @param listener
      */
-    void httpPost(onRequestListener listener);
+    void asynchronousGet(onRequestListener listener);
+
+    /**
+     * 同步post请求
+     */
+    String synchronousPost();
+
+    /**
+     * 异步post请求
+     * @param listener
+     */
+    void asynchronousPost(onRequestListener listener);
 }

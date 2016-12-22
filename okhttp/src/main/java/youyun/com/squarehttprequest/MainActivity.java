@@ -22,10 +22,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handlerGet(View view) {
-        request.httpGet(new onRequestListener() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = request.synchronousGet();
+                Log.v("Bill", "同步get请求:" + result);
+            }
+        }).start();
+
+
+        request.asynchronousGet(new onRequestListener() {
             @Override
             public void onSuccess(String response) {
-                Log.v("Bill", "response:" + response);
+                Log.v("Bill", "异步get请求:" + response);
             }
 
             @Override
@@ -36,10 +45,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handlerPost(View view) {
-        request.httpPost(new onRequestListener() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = request.synchronousPost();
+                Log.v("Bill", "同步post请求:" + result);
+            }
+        }).start();
+
+        request.asynchronousPost(new onRequestListener() {
             @Override
             public void onSuccess(String response) {
-                Log.v("Bill", "response:" + response);
+                Log.v("Bill", "异步post请求:" + response);
             }
 
             @Override
