@@ -1,4 +1,4 @@
-package com.bill.retrofit;
+package com.bill.retrofit.test1;
 
 /**
  * Created by Bill on 2016/12/24.

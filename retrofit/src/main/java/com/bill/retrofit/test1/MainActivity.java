@@ -1,10 +1,12 @@
-package com.bill.retrofit;
+package com.bill.retrofit.test1;
 
 import android.os.NetworkOnMainThreadException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.bill.retrofit.R;
 
 import java.io.IOException;
 
