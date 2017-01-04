@@ -12,13 +12,16 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".test1.MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".myservertest.TestActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".test2.Main2Activity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".test2.Main2Activity" android:screenOrientation="portrait">
+        <activity android:name=".rxjava.TestRxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
